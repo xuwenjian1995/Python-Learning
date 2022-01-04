@@ -34,5 +34,7 @@ class TestDict(unittest.TestCase):
     def tearDown(self):
         print('test finished')
 
+print('test')
+
 if __name__ == '__main__':
     unittest.main()
