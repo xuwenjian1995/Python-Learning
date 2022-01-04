@@ -3,7 +3,8 @@ import unittest
 from slice import Dict
 
 class TestDict(unittest.TestCase):
-
+    def setUp(self):
+        print('unittest starts')
     def test_init(self):
         d = Dict(a=1, b='test')
         self.assertEqual(d.a, 1)
@@ -30,6 +31,8 @@ class TestDict(unittest.TestCase):
         d = Dict()
         with self.assertRaises(AttributeError):
             value = d.empty
+    def tearDown(self):
+        print('test finished')
 
 if __name__ == '__main__':
     unittest.main()
